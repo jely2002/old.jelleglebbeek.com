@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { ParallaxComponent } from './parallax/parallax.component';
+import { PcComponent } from './pc/pc.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ParallaxComponent } from './parallax/parallax.component';
     FooterComponent,
     ProjectsComponent,
     AboutmeComponent,
-    ParallaxComponent
+    ParallaxComponent,
+    PcComponent
   ],
   imports: [
     BrowserModule,
