@@ -1,0 +1,20 @@
+@media only screen and (max-width: 600px) {
+  .brand-logo {
+    font-size: 22px !important;
+  }
+}
+
+.side-title {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 4%;
+}
+
+.divider {
+  margin-bottom: 4%;
+}
+
+.sideNav {
+  width: 200px;
+}
