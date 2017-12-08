@@ -1,0 +1,11 @@
+.slider {
+  margin: 0;
+}
+
+.title {
+    padding: 2%;
+}
+
+.row, h3, .title {
+  margin: 0 !important;
+}
