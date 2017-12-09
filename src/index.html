@@ -10,6 +10,12 @@
 </head>
 
 <style>
+@media only screen and (max-width: 600px) {
+  .spinner {
+    left: 35% !important;
+  }
+}
+
 .spinner {
   margin: 0;
   width: 100vh;
@@ -26,7 +32,7 @@
 }
 
 .spinner {
-  position: absolute;
+  position: fixed;
   top: 45%;
   left: 46%;
   right: 0;
@@ -75,8 +81,7 @@
 </style>
 
 <body>
-  <app-root>
-  </app-root>
+  <app-root></app-root>
   <div id="preloader">
   <div class="bg"></div>
     <div class="spinner">
