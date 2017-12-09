@@ -9,6 +9,6 @@ import * as $ from 'jquery';
 export class AppComponent {
   ngAfterViewInit() {
     $(document).ready(function() { console.log('jquery is working'); });
-    $('#preloader').delay("100").fadeOut("400");
+    $('#preloader').delay(100).fadeOut(400);
   }
 }
