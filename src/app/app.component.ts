@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import * as $ from 'jquery';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +6,4 @@ import * as $ from 'jquery';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  ngAfterViewInit() {
-    $(document).ready(function() { console.log('jquery is working'); });
-    $('#preloader').delay(100).fadeOut(400);
-  }
 }
