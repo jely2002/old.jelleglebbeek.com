@@ -1,0 +1,30 @@
+.collapsible-header {
+  border: 1px solid #455a64;
+}
+
+.collapsible-body {
+  border-top: none !important;
+  border: 1px solid #455a64;
+}
+
+.badge {
+  color: #fff;
+}
+
+.middle {
+  border-top: none;
+  border-bottom: none;
+}
+
+ul, li {
+  margin: 0;
+}
+
+.title {
+  margin-bottom: 30px;
+}
+
+.projects {
+  background: #607d8b;
+  padding: 15px 30px 30px 30px;
+}
