@@ -9,3 +9,27 @@
 .row, h3, .title {
   margin: 0 !important;
 }
+
+.components {
+  background: #37474f;
+  padding: 15px 50px 15px 50px;
+}
+
+.collection-item, .collection {
+  border: 1px solid #37474f;
+  border-left: none;
+  border-right: none;
+}
+
+.mid-1 {
+  border-top: none;
+  border-bottom: none;
+}
+
+.mid-2 {
+  border-bottom: none;
+}
+
+.collection {
+  margin-bottom: 4%;
+}
