@@ -9,6 +9,13 @@ import {Observable} from 'rxjs/Rx';
 })
 export class ProjectsComponent implements OnInit {
 
+  actions = new EventEmitter<string|MaterializeAction>();
+
+  noopen(index) {
+      this.actions.emit({action:"collapsible", params:['open', index]});
+      this.actions.emit({action:"collapsible", params:['close', index]});
+  }
+
   constructor() {
   }
 
