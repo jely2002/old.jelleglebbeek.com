@@ -4,6 +4,10 @@ body {
   flex-direction: column;
 }
 
+.page-footer {
+  margin-top: -20px;
+}
+
 main {
   flex: 1 0 auto;
 }
