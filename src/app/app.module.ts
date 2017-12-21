@@ -11,6 +11,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { ParallaxComponent } from './parallax/parallax.component';
 import { PcComponent } from './pc/pc.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { PcComponent } from './pc/pc.component';
     ProjectsComponent,
     AboutmeComponent,
     ParallaxComponent,
-    PcComponent
+    PcComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
