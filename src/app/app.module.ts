@@ -3,7 +3,9 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ParticlesModule } from 'angular-particle';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http'
 
+import { FormService } from './services/form.service';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -29,9 +31,10 @@ import { ContactComponent } from './contact/contact.component';
     BrowserModule,
     MaterializeModule,
     ParticlesModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [FormService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
