@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormService } from '../services/form.service';
 import { Headers, Response } from '@angular/http';
 import { NgForm } from '@angular/forms';
-import { FormSubmission } from 'form-submission'
+import { FormSubmission } from 'FormSubmission'
 
 @Component({
   selector: 'app-contact',
