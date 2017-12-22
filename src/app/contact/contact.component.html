@@ -3,26 +3,26 @@
 </div>
 <div materialize class="contact white-text blue-grey darken-2">
   <div class="row">
-    <form class="col s12">
+    <form #form="ngForm" (ngSubmit)="submitForm(form)" id="form" class="col s12" ngNativeValidate>
       <div class="row">
         <div class="input-field col s6">
-          <input id="first_name" type="text" class="validate" required>
+          <input [(ngModel)]="submissions.first_name" name="first_name" id="first_name" type="text" class="validate" required>
           <label data-error="This field is required" for="first_name">First name</label>
         </div>
         <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate">
-          <label for="last_name">Last Name</label>
+          <input [(ngModel)]="submissions.last_name" name="last_name" id="last_name" type="text" class="validate" required>
+          <label data-error="This field is required" for="last_name">Last Name</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input type="email" class="validate" required>
+          <input [(ngModel)]="submissions.email" name="email" id="email" type="email" class="validate" required>
           <label data-error="Make sure the e-mail address is valid" for="email">Email</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <textarea id="message" class="materialize-textarea validate" required></textarea>
+          <textarea [(ngModel)]="submissions.message" name="message" id="message" class="materialize-textarea validate" required></textarea>
           <label data-error="This field is required" class="txtarea" for="message">Message</label>
         </div>
       </div>

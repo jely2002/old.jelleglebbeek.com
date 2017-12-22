@@ -4,6 +4,7 @@ import { ParticlesModule } from 'angular-particle';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http'
+import { FormsModule } from '@angular/forms';
 
 import { FormService } from './services/form.service';
 import { AppComponent } from './app.component';
@@ -32,7 +33,8 @@ import { ContactComponent } from './contact/contact.component';
     MaterializeModule,
     ParticlesModule,
     AngularFontAwesomeModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [FormService],
   bootstrap: [AppComponent]

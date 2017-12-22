@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormService } from '../services/form.service';
+import { Headers, Response } from '@angular/http';
+import { NgForm } from '@angular/forms';
+import { FormSubmission } from 'form-submission'
 
 @Component({
   selector: 'app-contact',
@@ -8,18 +11,25 @@ import { FormService } from '../services/form.service';
 })
 export class ContactComponent implements OnInit {
 
+  submissions: FormSubmission = { first_name: '', last_name: '', email: '', message: ''};
+
   constructor(private formService:FormService) {
   }
 
-  ngOnInit() {
-    this.formService.http.post('http://jelleglebbeek.com/walksimulator/verify.php/')
+  submitForm(form:ngForm) {
+    if(this.submissions.first_name != "" && this.submissions.last_name != "" && this.submissions.email != "" && this.submissions.message != ""){
+    this.formService.request().post('../assets/mail/mail.php/', form.value)
       .subscribe(
-        (res: Response) => {
-         this.data = res;
-         console.log(this.data)
+        (data) => {
+         console.log(data);
        },
        (err: Error) => console.log(err)
       );
+    }
+  }
+
+  ngOnInit() {
+
   }
 
 }
