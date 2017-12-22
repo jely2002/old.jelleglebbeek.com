@@ -16,7 +16,7 @@ export class ContactComponent implements OnInit {
   constructor(private formService:FormService) {
   }
 
-  submitForm(form:ngForm) {
+  submitForm(form:NgForm) {
     if(this.submissions.first_name != "" && this.submissions.last_name != "" && this.submissions.email != "" && this.submissions.message != ""){
     this.formService.request().post('../assets/mail/mail.php/', form.value)
       .subscribe(
