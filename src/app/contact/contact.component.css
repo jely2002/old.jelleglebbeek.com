@@ -22,3 +22,8 @@ h3 {
   margin-top: 4px;
   font-size: 11px;
 }
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #455a64 inset !important;
+    -webkit-text-fill-color: #fff !important;
+}
