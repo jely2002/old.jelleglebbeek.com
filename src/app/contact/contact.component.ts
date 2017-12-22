@@ -16,16 +16,19 @@ export class ContactComponent implements OnInit {
   constructor(private formService:FormService) {
   }
 
+  removeForm() {
+    $('.contact').html('<p style="  display: block; border-radius: 20px; padding: 5%; background-color: rgba(76, 175, 80, 0.4); font-size: 15px;" class="center">Thanks for submitting the contact form!</p>').fadeIn(1200);
+  }
+
   submitForm(form:NgForm) {
     if(this.submissions.first_name != "" && this.submissions.last_name != "" && this.submissions.email != "" && this.submissions.message != ""){
-    this.formService.request().post('../assets/mail/mail.php/', form.value)
+    this.formService.request().post('../new/assets/mail/mail.php/', form.value)
       .subscribe(
-        (data) => {
-         console.log(data);
-       },
+        (data) => {},
        (err: Error) => console.log(err)
       );
     }
+    this.removeForm();
   }
 
   ngOnInit() {

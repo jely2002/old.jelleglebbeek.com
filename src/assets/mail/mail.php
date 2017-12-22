@@ -1,34 +1,27 @@
 <?php
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Headers: X-Requested-With');
+header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
 
-    if(isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['email']) && isset($_POST['message'])) {
+$first_name = $last_name = $email = $message = "";
 
-    $email_to = "contact@jelleglebbeek.com";
-    $email_subject = "New form entry";
+//Receive the RAW post data.
+$content = trim(file_get_contents("php://input"));
 
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
-    $email_from = $_POST['email'];
-    $message = $_POST['message'];
-
-    $email_message = "Form details below.\n\n";
-
-    function clean_string($string) {
-      $bad = array("content-type","bcc:","to:","cc:","href");
-      return str_replace($bad,"",$string);
-    }
-
-    $email_message .= "First Name: ".clean_string($first_name)."\n";
-    $email_message .= "Last Name: ".clean_string($last_name)."\n";
-    $email_message .= "Email: ".clean_string($email_from)."\n";
-    $email_message .= "Message: ".clean_string($message)."\n";
-
-// create email headers
-$headers = 'From: '.$email_from."\r\n".
-'Reply-To: '.$email_from."\r\n" .
-'X-Mailer: PHP/' . phpversion();
-@mail($email_to, $email_subject, $email_message, $headers);
-echo 'true';
-} else {
-  echo 'false';
+function json_decode_nice($json, $assoc = FALSE){
+    $json = str_replace(array("\n","\r"),"",$json);
+    $json = preg_replace('/([{,]+)(\s*)([^"]+?)\s*:/','$1"$3":',$json);
+    return json_decode($json,$assoc);
 }
+
+//Attempt to decode the incoming RAW post data from JSON.
+$decoded = json_decode_nice($content);
+
+$first_name = $decoded->first_name;
+$last_name = $decoded->last_name;
+$email = $decoded->email;
+$message = $decoded->message;
+
+mail("contact@jelleglebbeek.com", "New form entry from " . $first_name, "Name: " . $first_name . " " . $last_name . "\n" . "E-mail: " . $email . "\n" . "Message: " . $message);
+
 ?>

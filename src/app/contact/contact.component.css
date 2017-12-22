@@ -27,3 +27,10 @@ input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 30px #455a64 inset !important;
     -webkit-text-fill-color: #fff !important;
 }
+
+.thanks {
+  display: block;
+  border-radius: 20px;
+  padding: 5%;
+  background-color: #4caf50;
+}
