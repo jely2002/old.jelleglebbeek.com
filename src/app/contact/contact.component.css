@@ -34,3 +34,8 @@ input:-webkit-autofill {
   padding: 5%;
   background-color: #4caf50;
 }
+
+#recaptcha {
+    width: 304px;
+    margin: 0 auto;
+}

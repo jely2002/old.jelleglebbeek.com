@@ -13,7 +13,33 @@ export class ContactComponent implements OnInit {
 
   submissions: FormSubmission = { first_name: '', last_name: '', email: '', message: ''};
 
+  validated = false;
+
   constructor(private formService:FormService) {
+  }
+
+  validate(res, inst) {
+    if(res) {
+      inst.validated = true;
+    } else {
+      inst.validated = false;
+    }
+    console.log("2nd " + inst.validated);
+  }
+
+
+  serverValidate(key) {
+    this.formService.request().post('../new/assets/mail/captcha.php', {
+      response: key
+    })
+      .subscribe(
+        (data) => {
+          data = JSON.parse(data['_body']);
+          console.log("1st " + data);
+          this.validate(data, this);
+        },
+       (err: Error) => console.log(err)
+      );
   }
 
   removeForm() {

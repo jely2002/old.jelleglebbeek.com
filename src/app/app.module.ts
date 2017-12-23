@@ -1,4 +1,5 @@
 import { MaterializeModule } from 'angular2-materialize';
+import { ReCaptchaModule } from 'angular2-recaptcha';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ParticlesModule } from 'angular-particle';
 import { BrowserModule } from '@angular/platform-browser';
@@ -34,7 +35,8 @@ import { ContactComponent } from './contact/contact.component';
     ParticlesModule,
     AngularFontAwesomeModule,
     HttpModule,
-    FormsModule
+    FormsModule,
+    ReCaptchaModule
   ],
   providers: [FormService],
   bootstrap: [AppComponent]

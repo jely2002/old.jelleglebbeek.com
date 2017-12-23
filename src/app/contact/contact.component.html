@@ -27,7 +27,12 @@
         </div>
       </div>
       <div class="row center">
-        <button class="btn waves waves-effect white grey-text darken-text-2" type="submit" name="action">Send
+        <div  align="center" class="input-field col s12">
+           <re-captcha (captchaResponse)="serverValidate($event)" site_key="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></re-captcha><br><br>
+        </div>
+      </div>
+      <div class="row center">
+        <button [disabled]="!validated" class="btn waves waves-effect white grey-text darken-text-2" type="submit" name="action">Send
           <i class="material-icons right">send</i>
         </button>
       </div>
