@@ -2,3 +2,38 @@
 .parallax img {
   width: 101%;
 }
+.side-nav {
+    position: fixed !important;
+    z-index: 950 !important;
+}
+
+#sidenav-overlay {
+  left: 220px;
+  z-index: 920 !important;
+  -webkit-animation: slide 0.3s alternate;
+  -webkit-animation-iteration-count: 1;
+
+  animation: slide 0.3s alternate;
+  animation-iteration-count: 1;
+}
+
+.navbar-fixed {
+  z-index: 910 !important;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 220px;
+  }
+}
+@keyframes slide {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 220px;
+  }
+}
