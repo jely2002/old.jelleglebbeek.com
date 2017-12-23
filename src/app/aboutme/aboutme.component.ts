@@ -13,7 +13,9 @@ export class AboutmeComponent implements OnInit {
     $('a[href^="#"]').on('click',function (e) {
         e.preventDefault();
 
-        var target = window.location.hash;
+        var HtmlElement: any = this;
+        var target = HtmlElement.hash;
+        console.log(target);
         var $target = $(target);
 
         $('html, body').stop().animate({
