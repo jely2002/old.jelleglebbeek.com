@@ -14,6 +14,35 @@ h3 {
   margin-bottom: auto;
 }
 
+#recaptcha {
+    width: 50%;
+    -webkit-margin-start: 0px !important;
+    -webkit-margin-end: 0px !important;
+}
+
+@media only screen and (max-width: 600px) {
+  form {
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+  .captcha {
+    transform: translate(-5%, -10%) scale(0.88) !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .captcha {
+    transform: translate(0, -10%) scale(1) !important;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .captcha {
+    transform: translate(-5%, -10%) scale(1) !important;
+  }
+}
+
+
 .body {
   background: #455a64;
 }
@@ -63,10 +92,4 @@ p.thanks {
   100% {
     background-color: #455a64;
   }
-}
-
-#recaptcha {
-    width: 304px;
-    -webkit-margin-start: 0px !important;
-    -webkit-margin-end: 0px !important;
 }

@@ -3,7 +3,7 @@
 </div>
 <div *ngIf="showForm" materialize class="contact white-text blue-grey darken-2">
   <div class="row">
-    <form #form="ngForm" (ngSubmit)="submitForm(form)" id="form" class="col s12" ngNativeValidate>
+    <form #form="ngForm" (ngSubmit)="submitForm(form)" id="form" class="col s10 offset-s1" ngNativeValidate>
       <div class="row">
         <div class="input-field col s6">
           <input [(ngModel)]="submissions.first_name" name="first_name" id="first_name" type="text" class="validate" required>
@@ -26,8 +26,8 @@
           <label data-error="This field is required" class="txtarea" for="message">Message</label>
         </div>
       </div>
-      <div class="row center">
-        <div  align="center" class="input-field col s12">
+      <div class="row">
+        <div align="center" class="input-field captcha col s12">
            <re-captcha (captchaResponse)="serverValidate($event)" site_key="6Lcuax0UAAAAADxjpN3hjg7wFCF6fYWTKOSMUXz2"></re-captcha><br><br>
         </div>
       </div>
