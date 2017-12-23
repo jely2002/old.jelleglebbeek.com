@@ -18,7 +18,7 @@ $response = $decoded->response;
 
 $post_data = http_build_query(
     array(
-        'secret' => '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe',
+        'secret' => 'Key not included because of security reasons.',
         'response' => $response,
         'remoteip' => $_SERVER['REMOTE_ADDR']
     )

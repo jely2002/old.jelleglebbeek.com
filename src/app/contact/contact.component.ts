@@ -24,7 +24,6 @@ export class ContactComponent implements OnInit {
     } else {
       inst.validated = false;
     }
-    console.log("2nd " + inst.validated);
   }
 
 
@@ -35,7 +34,6 @@ export class ContactComponent implements OnInit {
       .subscribe(
         (data) => {
           data = JSON.parse(data['_body']);
-          console.log("1st " + data);
           this.validate(data, this);
         },
        (err: Error) => console.log(err)
