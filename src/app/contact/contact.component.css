@@ -29,13 +29,44 @@ input:-webkit-autofill {
 }
 
 .thanks {
-  display: block;
+  padding-bottom: 5%;
+}
+
+p.thanks {
   border-radius: 20px;
   padding: 5%;
   background-color: #4caf50;
+  animation-delay: 3s;
+  margin: 0 auto;
+  width: 85%;
+
+  -webkit-animation: fade 2.0s forwards;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-delay: 3s;
+  animation: fade 2.0s forwards;
+  animation-iteration-count: 1;
+  animation-delay: 3s;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    background-color: #4caf50;
+  }
+  100% {
+    background-color: #455a64;
+  }
+}
+@keyframes fade {
+  0% {
+    background-color: #4caf50;
+  }
+  100% {
+    background-color: #455a64;
+  }
 }
 
 #recaptcha {
     width: 304px;
-    margin: 0 auto;
+    -webkit-margin-start: 0px !important;
+    -webkit-margin-end: 0px !important;
 }

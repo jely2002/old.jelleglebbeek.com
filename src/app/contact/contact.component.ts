@@ -3,19 +3,33 @@ import { FormService } from '../services/form.service';
 import { Headers, Response } from '@angular/http';
 import { NgForm } from '@angular/forms';
 import { FormSubmission } from './FormSubmission'
+import {style, state, animate, transition, trigger} from '@angular/core';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  styleUrls: ['./contact.component.css'],
+  animations: [
+  trigger('fadeInOut', [
+    transition(':enter', [   // :enter is alias to 'void => *'
+      style({opacity:0}),
+      animate(500, style({opacity:1}))
+    ]),
+    transition(':leave', [   // :leave is alias to '* => void'
+      animate(500, style({opacity:0}))
+    ])
+  ])
+]
 })
 export class ContactComponent implements OnInit {
 
   submissions: FormSubmission = { first_name: '', last_name: '', email: '', message: ''};
 
   validated = false;
+  showForm = true;
 
   constructor(private formService:FormService) {
+    this.removeForm();
   }
 
   validate(res, inst) {
@@ -41,7 +55,7 @@ export class ContactComponent implements OnInit {
   }
 
   removeForm() {
-    $('.contact').html('<p style="  display: block; border-radius: 20px; padding: 5%; background-color: rgba(76, 175, 80, 0.4); font-size: 15px;" class="center">Thanks for submitting the contact form!</p>').fadeIn(1200);
+    this.showForm = false;
   }
 
   submitForm(form:NgForm) {
