@@ -3,23 +3,11 @@ import { FormService } from '../services/form.service';
 import { Headers, Response } from '@angular/http';
 import { NgForm } from '@angular/forms';
 import { FormSubmission } from './FormSubmission'
-import {style, state, animate, transition, trigger} from '@angular/core';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css'],
-  animations: [
-  trigger('fadeInOut', [
-    transition(':enter', [   // :enter is alias to 'void => *'
-      style({opacity:0}),
-      animate(500, style({opacity:1}))
-    ]),
-    transition(':leave', [   // :leave is alias to '* => void'
-      animate(500, style({opacity:0}))
-    ])
-  ])
-]
+  styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
 
@@ -28,9 +16,7 @@ export class ContactComponent implements OnInit {
   validated = false;
   showForm = true;
 
-  constructor(private formService:FormService) {
-    this.removeForm();
-  }
+  constructor(private formService:FormService) {}
 
   validate(res, inst) {
     if(res) {
@@ -56,6 +42,7 @@ export class ContactComponent implements OnInit {
 
   removeForm() {
     this.showForm = false;
+    console.log(this.showForm)
   }
 
   submitForm(form:NgForm) {
@@ -70,7 +57,7 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    console.log(this.showForm);
   }
 
 }

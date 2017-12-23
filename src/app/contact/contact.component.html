@@ -1,7 +1,7 @@
 <div class="title center row blue-grey darken-2 z-index-4">
     <h3 class="white-text">Contact</h3>
 </div>
-<div *ngIf="showForm" [@fadeInOut] materialize class="contact white-text blue-grey darken-2">
+<div *ngIf="showForm" materialize class="contact white-text blue-grey darken-2">
   <div class="row">
     <form #form="ngForm" (ngSubmit)="submitForm(form)" id="form" class="col s12" ngNativeValidate>
       <div class="row">
@@ -39,6 +39,6 @@
     </form>
   </div>
 </div>
-<div *ngIf="!showForm" [@fadeInOut] class="thanks blue-grey darken-2">
+<div *ngIf="!showForm" class="thanks blue-grey darken-2">
   <p class="flow-text center white-text thanks">Thank you for submitting the contact form!</p>
 </div>
