@@ -5,6 +5,10 @@
 /tmp
 /out-tsc
 
+#security
+/src/assets/mail/captcha.php
+/src/assets/mail/mail.php
+
 # dependencies
 /node_modules
 
