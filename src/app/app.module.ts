@@ -3,12 +3,10 @@ import { ReCaptchaModule } from 'angular2-recaptcha';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ParticlesModule } from 'angular-particle';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, forwardRef } from '@angular/core';
 import { HttpModule } from '@angular/http'
 import { FormsModule } from '@angular/forms';
 
-import { FormService } from './services/form.service';
-import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProjectsComponent } from './projects/projects.component';
@@ -16,6 +14,9 @@ import { AboutmeComponent } from './aboutme/aboutme.component';
 import { ParallaxComponent } from './parallax/parallax.component';
 import { PcComponent } from './pc/pc.component';
 import { ContactComponent } from './contact/contact.component';
+import { MainComponent } from './main/main.component';
+import { AppComponent } from './app.component';
+import { FormService } from './services/form.service';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { ContactComponent } from './contact/contact.component';
     AboutmeComponent,
     ParallaxComponent,
     PcComponent,
-    ContactComponent
+    ContactComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +40,9 @@ import { ContactComponent } from './contact/contact.component';
     FormsModule,
     ReCaptchaModule
   ],
-  providers: [FormService],
+  providers: [
+    FormService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
