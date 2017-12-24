@@ -17,6 +17,9 @@ import { ContactComponent } from './contact/contact.component';
 import { MainComponent } from './main/main.component';
 import { AppComponent } from './app.component';
 import { FormService } from './services/form.service';
+import { AppRoutingModule } from './/app-routing.module';
+import { WalksimulatorComponent } from './walksimulator/walksimulator.component';
+import { WebsiteComponent } from './website/website.component';
 
 
 @NgModule({
@@ -29,7 +32,9 @@ import { FormService } from './services/form.service';
     ParallaxComponent,
     PcComponent,
     ContactComponent,
-    MainComponent
+    MainComponent,
+    WalksimulatorComponent,
+    WebsiteComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +43,8 @@ import { FormService } from './services/form.service';
     AngularFontAwesomeModule,
     HttpModule,
     FormsModule,
-    ReCaptchaModule
+    ReCaptchaModule,
+    AppRoutingModule
   ],
   providers: [
     FormService
