@@ -21,10 +21,15 @@ ul, li {
 }
 
 .title {
-  margin-bottom: 30px;
+  line-height: 32px !important;
 }
 
 .projects {
   background: #607d8b;
   padding: 15px 30px 30px 30px;
+}
+
+span.underline {
+  margin-bottom: 30px;
+  font-size: 15px;
 }
