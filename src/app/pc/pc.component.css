@@ -6,8 +6,13 @@
     padding: 2%;
 }
 
-.row, h3, .title {
+.h3, .title {
   margin: 0 !important;
+}
+
+.row {
+  margin-top: -2px !important;
+  margin-bottom: 0 !important;
 }
 
 .components {

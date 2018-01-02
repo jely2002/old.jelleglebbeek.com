@@ -1,6 +1,7 @@
 .contact {
   background: #455a64 ;
   padding: 30px 30px 30px 30px;
+  margin-top: -2px !important;
 }
 
 h3 {
