@@ -42,7 +42,6 @@ export class ContactComponent implements OnInit {
 
   removeForm() {
     this.showForm = false;
-    console.log(this.showForm)
   }
 
   submitForm(form:NgForm) {
@@ -57,7 +56,6 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.showForm);
   }
 
 }
