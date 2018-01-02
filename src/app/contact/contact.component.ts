@@ -28,7 +28,7 @@ export class ContactComponent implements OnInit {
 
 
   serverValidate(key) {
-    this.formService.request().post('../new/assets/mail/captcha.php', {
+    this.formService.request().post('../assets/mail/captcha.php', {
       response: key
     })
       .subscribe(
@@ -46,7 +46,7 @@ export class ContactComponent implements OnInit {
 
   submitForm(form:NgForm) {
     if(this.submissions.first_name != "" && this.submissions.last_name != "" && this.submissions.email != "" && this.submissions.message != ""){
-    this.formService.request().post('../new/assets/mail/mail.php/', form.value)
+    this.formService.request().post('../assets/mail/mail.php/', form.value)
       .subscribe(
         (data) => {},
        (err: Error) => console.log(err)
