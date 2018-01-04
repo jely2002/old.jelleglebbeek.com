@@ -9,7 +9,7 @@ export class ParallaxComponent implements OnInit {
 
   constructor() { }
 
-  hide: false;
+  hide = false;
 
 
   ngOnInit() {
@@ -20,10 +20,11 @@ export class ParallaxComponent implements OnInit {
   }
 
     $(window).resize(function() {
+    var HTMLElement: any = this;
     if (window.innerWidth <= 992) {
-      this.hide = true;
+      var hide = true;
     } else {
-      this.hide = false;
+      var hide = false;
     }
     });
   }
