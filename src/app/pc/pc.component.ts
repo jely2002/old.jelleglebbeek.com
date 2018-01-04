@@ -10,8 +10,23 @@ export class PcComponent implements OnInit {
 
   constructor() { }
 
+  hide: false;
+
+
   ngOnInit() {
-      $('#preloader').delay(100).fadeOut(400);
+    if (window.innerWidth <= 992) {
+    this.hide = true;
+  } else {
+    this.hide = false;
+  }
+
+    $(window).resize(function() {
+    if (window.innerWidth <= 992) {
+      this.hide = true;
+    } else {
+      this.hide = false;
+    }
+    });
   }
 
 }

@@ -56,6 +56,7 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit() {
+    $('#preloader').delay(100).fadeOut(400);
   }
 
 }
