@@ -26,8 +26,6 @@ export class ParallaxComponent implements OnInit {
       this.hide = false;
     }
     });
-
-    console.log(window.innerWidth);
   }
 
 }
