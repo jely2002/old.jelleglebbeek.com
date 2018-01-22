@@ -55,7 +55,7 @@ export class ContactComponent implements OnInit {
     this.removeForm();
   }
 
-  ngOnInit() {
+  ngAfterViewInit() {
     $('#preloader').delay(100).fadeOut(400);
   }
 
