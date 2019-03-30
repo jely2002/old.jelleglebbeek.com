@@ -10,6 +10,7 @@ export class MainComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    (<any>window).ga('send', 'pageview');
   }
 
 }

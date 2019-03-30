@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AnalyticsService} from "../services/analytics.service";
 
 @Component({
   selector: 'app-aboutme',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutmeComponent implements OnInit {
 
-  constructor() { }
+  constructor(public analytics: AnalyticsService) { }
 
   ngOnInit() {
     $('a[href^="#"]').on('click',function (e) {

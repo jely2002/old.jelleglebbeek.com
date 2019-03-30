@@ -3,6 +3,7 @@ import { FormService } from '../services/form.service';
 import { Headers, Response } from '@angular/http';
 import { NgForm } from '@angular/forms';
 import { FormSubmission } from './FormSubmission'
+import {AnalyticsService} from "../services/analytics.service";
 
 @Component({
   selector: 'app-contact',
@@ -16,7 +17,7 @@ export class ContactComponent implements OnInit {
   validated = false;
   showForm = true;
 
-  constructor(private formService:FormService) {}
+  constructor(private formService:FormService, public analytics: AnalyticsService) {}
 
   validate(res, inst) {
     if(res) {
@@ -53,6 +54,7 @@ export class ContactComponent implements OnInit {
       );
     }
     this.removeForm();
+    this.analytics.sendClick('Submit','contact form','');
   }
 
   ngOnInit() {

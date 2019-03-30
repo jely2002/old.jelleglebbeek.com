@@ -4,15 +4,14 @@
               <div class="col l6 s12">
                 <h5 class="white-text">About me</h5>
                 <p class="grey-text text-lighten-4">Jelle Glebbeek, a webdeveloper and programmer.</p>
-                 <a href="#about" class="hide-on-small-only btn waves-effect waves-light white grey-text darken-text-2">More about me</a>
+                 <a href="#about" class="hide-on-small-only btn waves-effect waves-light white grey-text darken-text-2" (click)="analytics.sendClick('Click','footer','about me')">More about me</a>
               </div>
               <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Social Media</h5>
                 <ul>
-                  <li><fa name="facebook"></fa><a class="grey-text text-lighten-3" target="_blank" href="https://www.facebook.com/profile.php?id=100011076484747">Facebook</a></li>
-                  <li><fa name="twitter"></fa><a class="grey-text text-lighten-3" target="_blank" href="https://twitter.com/jelleglebbeek">Twitter</a></li>
-                  <li><fa name="youtube"></fa><a class="grey-text text-lighten-3" target="_blank" href="https://www.youtube.com/channel/UC8AEj2uw4v50sG8IWrYjD0A">YouTube</a></li>
-                  <li><fa name="github"></fa><a class="grey-text text-lighten-3" target="_blank" href="https://github.com/jely2002">Github</a></li>
+                  <li><fa name="twitter"></fa><a class="grey-text text-lighten-3" target="_blank" href="https://twitter.com/jelleglebbeek" (click)="analytics.sendClick('Click','social media','twitter')">Twitter</a></li>
+                  <li><fa name="youtube"></fa><a class="grey-text text-lighten-3" target="_blank" href="https://www.youtube.com/channel/UC8AEj2uw4v50sG8IWrYjD0A" (click)="analytics.sendClick('Click','social media','youtube')">YouTube</a></li>
+                  <li><fa name="github"></fa><a class="grey-text text-lighten-3" target="_blank" href="https://github.com/jely2002" (click)="analytics.sendClick('Click','social media','github')">Github</a></li>
                 </ul>
               </div>
             </div>

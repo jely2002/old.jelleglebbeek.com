@@ -1,6 +1,7 @@
 import { Component, OnInit, EventEmitter } from '@angular/core';
 import {MaterializeAction} from 'angular2-materialize';
 import {Observable} from 'rxjs/Rx';
+import {AnalyticsService} from "../services/analytics.service";
 
 @Component({
   selector: 'app-projects',
@@ -16,7 +17,7 @@ export class ProjectsComponent implements OnInit {
       this.actions.emit({action:"collapsible", params:['close', index]});
   }
 
-  constructor() {
+  constructor(public analytics: AnalyticsService) {
   }
 
   ngOnInit() {}

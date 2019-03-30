@@ -4,17 +4,17 @@
     <a class="brand-logo">&nbsp;&nbsp;Jelle Glebbeek</a>
     <a materialize="sideNav" [materializeParams]="[{menuWidth: 220, closeOnClick: true}]" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
-      <li><a href="#about">About me</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#pc">My PC</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about" (click)="analytics.sendClick('Click','navbar','about')">About me</a></li>
+      <li><a href="#projects" (click)="analytics.sendClick('Click','navbar','projects')">Projects</a></li>
+      <li><a href="#pc" (click)="analytics.sendClick('Click','navbar','pc')">My PC</a></li>
+      <li><a href="#contact" (click)="analytics.sendClick('Click','navbar','contact')">Contact</a></li>
     </ul>
     <ul class="side-nav grey darken-2" id="mobile">
       <li><a href="" class="side-title white-text">Jelle Glebbeek</a><div class="grey darken-1 divider"></div></li>
-      <li><a href="#about" class="white-text">About me</a></li>
-      <li><a href="#projects" class="white-text">Projects</a></li>
-      <li><a href="#webdesign" class="white-text">My PC</a></li>
-      <li><a href="#contact" class="white-text">Contact</a></li>
+      <li><a href="#about" class="white-text" (click)="analytics.sendClick('Click','navbar','about')">About me</a></li>
+      <li><a href="#projects" class="white-text" (click)="analytics.sendClick('Click','navbar','projects')">Projects</a></li>
+      <li><a href="#webdesign" class="white-text" (click)="analytics.sendClick('Click','navbar','pc')">My PC</a></li>
+      <li><a href="#contact" class="white-text" (click)="analytics.sendClick('Click','navbar','contact')">Contact</a></li>
     </ul>
   </div>
 </nav>
