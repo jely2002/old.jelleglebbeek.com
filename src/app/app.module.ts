@@ -18,6 +18,7 @@ import { MainComponent } from './main/main.component';
 import { AppComponent } from './app.component';
 import { FormService } from './services/form.service';
 import { AppRoutingModule } from './/app-routing.module';
+import {AnalyticsService} from "./services/analytics.service";
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { AppRoutingModule } from './/app-routing.module';
     AppRoutingModule
   ],
   providers: [
-    FormService
+    FormService,
+    AnalyticsService
   ],
   bootstrap: [AppComponent]
 })
