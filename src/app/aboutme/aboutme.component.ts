@@ -21,7 +21,7 @@ export class AboutmeComponent implements OnInit {
     return age;
   }
   
-  age = ageFromDateOfBirthday("06/09/2002");
+  age = this.ageFromDateOfBirthday("06/09/2002");
      
   ngOnInit() {
     $('a[href^="#"]').on('click',function (e) {
