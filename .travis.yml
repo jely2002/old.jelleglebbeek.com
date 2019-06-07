@@ -11,4 +11,4 @@ before_script:
 script:
   - ng build --prod --base-href /
 after_success:
-  - find . -type d \( -path "./.*" -o -path "./node_modules" \) -prune -o -name "*" -print -exec curl --ftp-create-dirs -T {} ftp://ftp.strato.com/jelleglebbeek/ --user ${SFTP_USER}:${SFTP_PASSWORD} \;
+  - find . -type d \( -path "./.*" -o -path "./node_modules" \) -prune -o -name "*" -print -exec curl --ftp-create-dirs -T {} ftp://jelleglebbeek.com/jelleglebbeek/ --user ${SFTP_USER}:${SFTP_PASSWORD} \;
